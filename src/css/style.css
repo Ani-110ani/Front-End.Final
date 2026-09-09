@@ -445,3 +445,39 @@ footer {
   justify-content: center;
   margin-bottom: 20px;
 }
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: -100%;
+    flex-direction: column;
+    background-color: var(--section-bg);
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    transition: var(--transition);
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .burger-menu {
+    display: flex;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .hero-section,
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-content h3 {
+    text-align: center;
+  }
+}
