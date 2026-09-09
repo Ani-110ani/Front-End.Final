@@ -71,7 +71,7 @@ h3 {
   justify-content: space-between;
   align-items: center;
   padding: 20px 5%;
-  background-color: var(--section-bg);
+  background-color: var(--bg-color);
   backdrop-filter: blur(10px);
   z-index: 1000;
 }
@@ -79,7 +79,7 @@ h3 {
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--primary-color);
+  color: var(--text-grey);
 }
 
 .nav-links {
@@ -249,4 +249,69 @@ h3 {
   width: 60px;
   height: 60px;
   margin-bottom: 20px;
+}
+
+.projects-section {
+  padding: 80px 5%;
+  background-color: var(--section-bg);
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: transparent;
+  color: var(--text-light);
+  border: 2px solid var(--primary-color);
+  padding: 8px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: var(--primary-color);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  overflow: hidden;
+  padding-bottom: 20px;
+  transition: var(--transition);
+}
+
+.project-card.hide {
+  display: none;
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-card span {
+  color: var(--primary-color);
+  font-size: 0.9rem;
+  padding: 15px 15px 5px;
+  display: block;
+}
+
+.project-card h3 {
+  font-size: 1.2rem;
+  text-align: left;
+  padding: 0 15px;
 }
