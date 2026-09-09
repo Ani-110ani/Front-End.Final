@@ -41,6 +41,56 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
-
-
   
+  const testimonialsData = [
+    {
+      img: "src/images/image4.png",
+      quote: '"Excellent analytical skills. The Power BI dashboards transformed our complex banking datasets into clear, actionable insights."',
+      name: "TBC Campus Mentor",
+      role: "Data Analyst"
+    },
+    {
+      img: "src/images/image5.png",
+      quote: '"Outstanding front-end web development work. The UI components were incredibly responsive and clean."',
+      name: "Hackathon Judge",
+      role: "Software Engineer"
+    },
+    {
+      img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop",
+      quote: '"A brilliant grasp of financial modeling and Python. Highly recommend for any quantitative tasks."',
+      name: "University Professor",
+      role: "Finance Department"
+    },
+    {
+      img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&auto=format&fit=crop",
+      quote: '"Very professional and detail-oriented when handling our accounting and period-end closings."',
+      name: "Audit Manager",
+      role: "Financial Services"
+    }
+  ];
+
+  const dots = document.querySelectorAll(".dot");
+  const testiImg = document.getElementById("testi-img");
+  const testiQuote = document.getElementById("testi-quote");
+  const testiName = document.getElementById("testi-name");
+  const testiRole = document.getElementById("testi-role");
+
+  dots.forEach(dot => {
+    dot.addEventListener("click", (e) => {
+      dots.forEach(d => d.classList.remove("active"));
+      e.target.classList.add("active");
+
+      const index = e.target.getAttribute("data-index");
+      const data = testimonialsData[index];
+
+      testiQuote.style.opacity = 0;
+      setTimeout(() => {
+        if(data.img) testiImg.src = data.img; 
+        testiQuote.textContent = data.quote;
+        testiName.textContent = data.name;
+        testiRole.textContent = data.role;
+        testiQuote.style.opacity = 1;
+        testiQuote.style.transition = "opacity 0.5s ease";
+      }, 300);
+    });
+  });
