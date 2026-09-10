@@ -83,6 +83,15 @@ h3 {
   z-index: 1000;
 }
 
+.logo span {
+  font-family: "Bebas Neue", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 25px;
+  letter-spacing: -1%;
+}
+
 .nav-links {
   display: flex;
   gap: 30px;
