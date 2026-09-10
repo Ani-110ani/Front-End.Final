@@ -595,7 +595,7 @@ h3 {
 footer {
   padding: 60px 8% 30px;
   text-align: center;
-  background-color: #0a0a0a;
+  background-color: var(--bg-color);
 }
 
 .footer-logo h2 {
