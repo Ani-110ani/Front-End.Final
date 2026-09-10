@@ -28,6 +28,13 @@ body {
   line-height: 1.6;
 }
 
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
 a {
   text-decoration: none;
   color: inherit;
