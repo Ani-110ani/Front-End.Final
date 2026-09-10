@@ -1,10 +1,39 @@
 document.addEventListener("DOMContentLoaded", () => {
   const burgerMenu = document.querySelector(".burger-menu");
   const navLinks = document.querySelector(".nav-links");
+  const navItems = document.querySelectorAll(".nav-links li a");
 
   burgerMenu.addEventListener("click", () => {
     navLinks.classList.toggle("active");
+    burgerMenu.classList.toggle("toggle");
   });
+
+  navItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      navLinks.classList.remove("active");
+      burgerMenu.classList.remove("toggle");
+    });
+  });
+
+  const heroImages = [
+    "src/images/image1.png",
+    "src/images/image2.png",
+    "src/images/image3.png",
+  ];
+  let currentImageIndex = 0;
+  const sliderImage = document.getElementById("slider-image");
+
+  if (sliderImage) {
+    setInterval(() => {
+      currentImageIndex = (currentImageIndex + 1) % heroImages.length;
+      sliderImage.style.opacity = 0;
+
+      setTimeout(() => {
+        sliderImage.src = heroImages[currentImageIndex];
+        sliderImage.style.opacity = 1;
+      }, 400);
+    }, 5000);
+  }
 
   const progressBars = document.querySelectorAll(".progress");
 
@@ -40,8 +69,10 @@ document.addEventListener("DOMContentLoaded", () => {
           card.getAttribute("data-category") === filterValue
         ) {
           card.classList.remove("hide");
+          card.style.display = "block";
         } else {
           card.classList.add("hide");
+          card.style.display = "none";
         }
       });
     });
@@ -51,28 +82,28 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       img: "src/images/image4.png",
       quote:
-        '"Excellent analytical skills. The Power BI dashboards transformed our complex banking datasets into clear, actionable insights."',
-      name: "TBC Campus Mentor",
-      role: "Data Analyst",
+        "Ana's ability to dive into complex datasets with SQL and visualize them in Power BI completely transformed our business logic. A brilliant technical mind.",
+      name: "John Doe",
+      role: "Senior Data Architect",
     },
     {
       img: "src/images/image5.png",
       quote:
-        '"Outstanding front-end web development work. The UI components were incredibly responsive and clean."',
+        "Outstanding front-end web development work. The UI components were incredibly responsive, utilizing Tailwind CSS flawlessly.",
       name: "Hackathon Judge",
       role: "Software Engineer",
     },
     {
-      img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop",
+      img: "src/images/image6.png",
       quote:
-        '"A brilliant grasp of financial modeling and Python. Highly recommend for any quantitative tasks."',
+        "A brilliant grasp of financial modeling and Python. Highly recommend for any quantitative or accounting tasks involving complex operations.",
       name: "University Professor",
       role: "Finance Department",
     },
     {
-      img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&auto=format&fit=crop",
+      img: "src/images/image7.png",
       quote:
-        '"Very professional and detail-oriented when handling our accounting and period-end closings."',
+        "Very professional and detail-oriented when handling our accounting and period-end closings using ORIS software. A real asset to the team.",
       name: "Audit Manager",
       role: "Financial Services",
     },
@@ -107,13 +138,46 @@ document.addEventListener("DOMContentLoaded", () => {
   const contactForm = document.getElementById("contact-form");
   const modal = document.getElementById("success-modal");
   const closeModalBtn = document.getElementById("close-modal");
+  const submitBtn = document.getElementById("submit-btn");
 
-  contactForm.addEventListener("submit", (e) => {
+  contactForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    contactForm.reset();
+    const formData = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      website: document.getElementById("website").value,
+      message: document.getElementById("message").value,
+    };
 
-    modal.classList.add("show");
+    submitBtn.textContent = "Sending...";
+    submitBtn.disabled = true;
+
+    try {
+      const response = await fetch(
+        "https://jsonplaceholder.typicode.com/users",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        },
+      );
+
+      if (response.ok) {
+        contactForm.reset();
+        modal.classList.add("show");
+      } else {
+        alert("Oops! Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Network error. Please try again.");
+    } finally {
+      submitBtn.textContent = "Contact Me";
+      submitBtn.disabled = false;
+    }
   });
 
   closeModalBtn.addEventListener("click", () => {
