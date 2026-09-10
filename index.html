@@ -5,31 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Personal Portfolio Resume" />
 
-    <meta property="og:url" content="https://myportfolio.com/" />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:title"
-      content="Personal Portfolio of Ana Asatiani | Management Science & CS Student"
-    />
-    <meta
-      property="og:description"
-      content="Portfolio showcasing front-end development, data analytics, and financial modeling projects."
-    />
-    <meta property="og:image" content="images/image1.png" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:domain" content="myportfolio.com" />
-    <meta property="twitter:url" content="https://myportfolio.com/" />
-    <meta
-      name="twitter:title"
-      content="Personal Portfolio of Ana Asatiani | Management Science & CS Student"
-    />
-    <meta
-      name="twitter:description"
-      content="Portfolio showcasing front-end development, data analytics, and financial modeling projects."
-    />
-    <meta name="twitter:image" content="images/image1.png" />
-
     <title>Final Project</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
@@ -39,7 +14,11 @@
   </head>
   <body>
     <header class="navbar">
-      <div class="logo">Ana Asatiani</div>
+      <div class="logo">
+        <span style="display: none; font-weight: 700; font-size: 1.5rem"
+          >Ana Asatiani</span
+        >
+      </div>
       <nav>
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
@@ -48,6 +27,9 @@
           <li><a href="#projects">Projects</a></li>
           <li><a href="#testimonials">Testimonials</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li class="mobile-cv">
+            <a href="#contact" class="btn-primary">Download CV</a>
+          </li>
         </ul>
       </nav>
       <a href="#contact" class="btn-primary desktop-only">Download CV</a>
@@ -61,11 +43,14 @@
       <div class="hero-content">
         <h1>Hi I am</h1>
         <h2 class="hero-name">Ana Asatiani</h2>
-        <h3 class="hero-profession">Data & Web<br />Developer</h3>
+        <h3 class="hero-profession">
+          Web Developer & <br />
+          Data Analyst
+        </h3>
         <p>
-          I am a Management Science & Computer Science student at Kutaisi
-          International University. I specialize in front-end development, data
-          analytics, and financial modeling.
+          Management Science & Computer Science student at Kutaisi International
+          University. Specializing in front-end development, complex SQL data
+          analytics, and quantitative financial modeling.
         </p>
         <a href="#contact" class="btn-primary">Hire Me</a>
       </div>
@@ -92,16 +77,18 @@
 
     <section id="about" class="about-section">
       <div class="about-image">
-        <img src="src/images/image2.png" alt="About Me" />
+        <div class="image-wrapper-about">
+          <img src="src/images/image2.png" alt="About Me" />
+        </div>
       </div>
       <div class="about-content">
         <h3>About Me</h3>
         <p>
-          I combine my academic background in Management Science with a minor in
-          Computer Science to solve complex problems. My experience ranges from
-          crafting responsive UI components with Tailwind CSS to analyzing
-          datasets with SQL and Power BI, and modeling operations in Python and
-          R Studio.
+          I combine a strong academic background in Management Science with
+          hands-on experience in tech. I actively apply my skills—from building
+          dynamic responsive layouts using HTML/CSS/JS and Tailwind, to modeling
+          operations in Python and R Studio, and processing advanced journal
+          entries in ORIS Accounting.
         </p>
 
         <div class="skills">
@@ -112,19 +99,19 @@
             </div>
           </div>
           <div class="skill">
-            <span>SQL & Data Analytics</span>
+            <span>SQL & Power BI</span>
             <div class="progress-bar">
-              <div class="progress" data-width="70%"></div>
+              <div class="progress" data-width="80%"></div>
             </div>
           </div>
           <div class="skill">
-            <span>Python & R Modeling</span>
+            <span>Python & Financial Modeling</span>
             <div class="progress-bar">
               <div class="progress" data-width="90%"></div>
             </div>
           </div>
           <div class="skill">
-            <span>Financial Accounting (ORIS)</span>
+            <span>Accounting (ORIS)</span>
             <div class="progress-bar">
               <div class="progress" data-width="95%"></div>
             </div>
@@ -136,48 +123,76 @@
     <section id="services" class="services-section">
       <h3>Services</h3>
       <p class="section-desc">
-        Delivering data-driven insights and modern web solutions to streamline
-        your business operations and elevate your digital presence.
+        Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh
+        lectus netus in. Aliquet donec morbi convallis pretium.
       </p>
       <div class="service-cards">
         <div class="card">
           <div class="icon-placeholder">
-            <img src="src/images/Service1.png" alt="Web Development Icon" />
+            <img
+              src="src/images/Service1.png"
+              alt="Web Dev"
+              onerror="
+                this.src =
+                  'https://cdn-icons-png.flaticon.com/512/1055/1055685.png'
+              "
+            />
           </div>
-          <h4>Data Analytics</h4>
+          <h4>UI/UX</h4>
           <p>
-            Aggregating and analyzing data using complex SQL queries and
-            visualizing insights through Power BI dashboards.
+            Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam
+            interdum
           </p>
         </div>
         <div class="card">
           <div class="icon-placeholder">
-            <img src="src/images/Service2.png" alt="Data Analytics Icon" />
+            <img
+              src="src/images/Service2.png"
+              alt="Data"
+              onerror="
+                this.src =
+                  'https://cdn-icons-png.flaticon.com/512/1055/1055685.png'
+              "
+            />
           </div>
-          <h4>Web Development</h4>
+          <h4>Web Design</h4>
           <p>
-            Creating dynamic, responsive web pages and UI components using HTML,
-            CSS, JavaScript, and Tailwind CSS.
+            Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam
+            interdum
           </p>
         </div>
         <div class="card">
           <div class="icon-placeholder">
-            <img src="src/images/Service3.png" alt="Financial Modeling Icon" />
+            <img
+              src="src/images/Service3.png"
+              alt="Modeling"
+              onerror="
+                this.src =
+                  'https://cdn-icons-png.flaticon.com/512/1055/1055685.png'
+              "
+            />
           </div>
-          <h4>Financial Modeling</h4>
+          <h4>App Design</h4>
           <p>
-            Building quantitative models and running regression analyses using
-            Python, R Studio, and formatting reports in LaTeX.
+            Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam
+            interdum
           </p>
         </div>
         <div class="card">
           <div class="icon-placeholder">
-            <img src="src/images/Service4.png" alt="Audit & Accounting Icon" />
+            <img
+              src="src/images/Service4.png"
+              alt="Audit"
+              onerror="
+                this.src =
+                  'https://cdn-icons-png.flaticon.com/512/1055/1055685.png'
+              "
+            />
           </div>
-          <h4>Audit & Accounting</h4>
+          <h4>Graphic Design</h4>
           <p>
-            Processing financial journal entries, balance sheets, and managing
-            period-end closings with professional accuracy.
+            Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam
+            interdum
           </p>
         </div>
       </div>
@@ -186,16 +201,15 @@
     <section id="projects" class="projects-section">
       <h3>My Projects</h3>
       <p class="section-desc">
-        A selection of my recent hackathons, academic research frameworks, and
-        web development works.
+        Lorem ipsum dolor sit amet consectetur. Mollis erat duis aliquam mauris
+        est risus lectus. Phasellus consequat urna tellus
       </p>
       <div class="filters">
         <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="web">Web Dev</button>
-        <button class="filter-btn" data-filter="data">Data Analysis</button>
-        <button class="filter-btn" data-filter="business">
-          Business Models
-        </button>
+        <button class="filter-btn" data-filter="ui-ux">UI/UX</button>
+        <button class="filter-btn" data-filter="web">Web Design</button>
+        <button class="filter-btn" data-filter="app">App Design</button>
+        <button class="filter-btn" data-filter="graphic">Graphic Design</button>
       </div>
       <div class="project-grid">
         <div class="project-card" data-category="web">
@@ -203,24 +217,32 @@
             src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=400&auto=format&fit=crop"
             alt="Web Design"
           />
-          <span>Web Dev</span>
-          <h3>Responsive Portfolio Design</h3>
+          <span>Web Design</span>
+          <h3>AirCalling Landing Page Design</h3>
         </div>
-        <div class="project-card" data-category="business">
+        <div class="project-card" data-category="web">
           <img
             src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=400&auto=format&fit=crop"
             alt="Startup"
           />
-          <span>Business Models</span>
-          <h3>Tourism Startup Model (Travel Tech Hackathon)</h3>
+          <span>Web Design</span>
+          <h3>Business Landing Page Design</h3>
         </div>
-        <div class="project-card" data-category="data">
+        <div class="project-card" data-category="web">
           <img
             src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=400&auto=format&fit=crop"
             alt="Data Analytics"
           />
-          <span>Data Analysis</span>
-          <h3>Banking Dataset Power BI Dashboard</h3>
+          <span>Web Design</span>
+          <h3>Ecom Web Page Design</h3>
+        </div>
+        <div class="project-card" data-category="app">
+          <img
+            src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=400&auto=format&fit=crop"
+            alt="App Dev"
+          />
+          <span>App Design</span>
+          <h3>Mobile Banking Application</h3>
         </div>
       </div>
     </section>
@@ -228,20 +250,26 @@
     <section id="testimonials" class="testimonials-section">
       <h3>Testimonials</h3>
       <p class="section-desc">
-        Feedback from professors and professional programs.
+        Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh
+        lectus netus in. Aliquet donec morbi convallis pretium
       </p>
       <div class="testimonial-slider">
         <div class="testimonial-content">
-          <div class="client-image">
-            <img id="testi-img" src="src/images/image4.png" alt="Client" />
-          </div>
-          <div class="client-text">
-            <p id="testi-quote">
-              "Excellent analytical skills. The Power BI dashboards transformed
-              our complex banking datasets into clear, actionable insights."
-            </p>
-            <h4 id="testi-name">TBC Campus Mentor</h4>
-            <p id="testi-role" class="role">Data Analyst</p>
+          <div class="client-info-wrapper">
+            <div class="client-image">
+              <img id="testi-img" src="src/images/image4.png" alt="Client" />
+            </div>
+            <div class="client-text">
+              <div class="quote-marks">“</div>
+              <p id="testi-quote">
+                Lorem ipsum dolor sit amet consectetur. In enim cursus odio
+                accumsan. Id leo urna velit neque mattis id tellus arcu
+                condimentum. Augue dictum dolor elementum convallis dignissim
+                malesuada commodo ultrices.
+              </p>
+              <h4 id="testi-name">Name</h4>
+              <p id="testi-role" class="role">CEO</p>
+            </div>
           </div>
         </div>
         <div class="slider-dots">
@@ -256,25 +284,43 @@
     <section id="contact" class="contact-section">
       <h3>Contact Us</h3>
       <p class="section-desc">
-        Reach out for collaborations, project inquiries, or any accounting and
-        analytics support.
+        Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh
+        lectus netus in. Aliquet donec morbi convallis pretium. Turpis tempus
+        pharetra
       </p>
       <form id="contact-form">
-        <input type="text" id="name" placeholder="Your Name" required />
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your Name"
+          required
+        />
         <input
           type="email"
           id="email"
+          name="email"
           placeholder="Enter Your Email"
           required
         />
-        <input type="text" id="website" placeholder="Enter Your Website" />
+        <input
+          type="text"
+          id="website"
+          name="website"
+          placeholder="Enter Your Website"
+        />
         <textarea
           id="message"
+          name="message"
           rows="5"
           placeholder="Enter Your Message"
           required
         ></textarea>
-        <button type="submit" class="btn-primary">Contact Me</button>
+        <div class="submit-btn-wrapper">
+          <button type="submit" class="btn-primary" id="submit-btn">
+            Contact Me
+          </button>
+        </div>
       </form>
     </section>
 
